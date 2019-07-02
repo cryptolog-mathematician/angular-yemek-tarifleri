@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Kategori } from '../shared/kategori';
-import { HomeMixService } from '../services/home-mix.service';
+import { Kategori } from '../../shared/kategori';
+import { HomeMixService } from '../../services/home-mix.service';
 
 @Component({
   selector: 'app-navige',

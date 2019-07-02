@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Yemek } from '../shared/yemek';
-import { AnaYemeklerService } from '../services/ana-yemekler.service';
+import { Yemek } from '../../shared/yemek';
+import { AnaYemeklerService } from '../../services/ana-yemekler.service';
 
 @Component({
   selector: 'app-ana-yemekler',
@@ -9,10 +9,10 @@ import { AnaYemeklerService } from '../services/ana-yemekler.service';
 })
 export class AnaYemeklerComponent implements OnInit {
 
-  anaYemekler : Yemek[];
-  title = "Ana Yemekler";
+  anaYemekler: Yemek[];
+  title = 'Ana Yemekler';
 
-  constructor(private anaYemeklerService : AnaYemeklerService) { }
+  constructor(private anaYemeklerService: AnaYemeklerService) { }
 
   ngOnInit() {
     this.getAnaYemekTarifleri();

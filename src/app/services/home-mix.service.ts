@@ -19,14 +19,32 @@ export class HomeMixService {
 
   private kategorilerUrl = 'api/kategoriler';
 
+  private anaYemeklerUrl = 'api/anaYemekTarifleri';
+
+  private aperatifYemeklerUrl = 'api/aperatifYemekTarifleri';
+
   constructor(private http: HttpClient) { }
 
-  getRecipiesTarifler(): Observable< Kategori[] >{
+  getKategoriler(): Observable< Kategori[] >{
     return this.http.get<Kategori[]>(this.kategorilerUrl)
       .pipe(
         //tap(_ => this.log('fetched recipies')),
         catchError(this.handleError<Kategori[]>('getKategoriler', []))
       );
+  }
+
+  getAnayemekler(): Observable<Yemek[]>{
+    return this.http.get<Yemek[]>(this.anaYemeklerUrl)
+    .pipe(
+      catchError(this.handleError<Yemek[]>('getAnaYemekler', []))
+    );
+  }
+
+  getAperatifYemekler(): Observable<Yemek[]>{
+    return this.http.get<Yemek[]>(this.aperatifYemeklerUrl)
+    .pipe(
+      catchError(this.handleError<Yemek[]>('getAperatifYemekler', []))
+    );
   }
 
   /**

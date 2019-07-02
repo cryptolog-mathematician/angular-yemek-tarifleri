@@ -19,19 +19,19 @@ export class AparatifYemeklerService {
 
   constructor(private http: HttpClient) { }
 
-  getAperatifYemekler(): Observable< Yemek[] >{
+  getAperatifYemekler(): Observable< Yemek[] > {
     return this.http.get<Yemek[]>(this.aperatifYemeklerUrl)
       .pipe(
-        //tap(_ => this.log('fetched recipies')),
+        // tap(_ => this.log('fetched recipies')),
         catchError(this.handleError<Yemek[]>('getAperatifYemekler', []))
       );
   }
 
-  getAperatifYemek(id: number): Observable< Yemek >{
+  getAperatifYemek(id: number): Observable< Yemek > {
     const url = `${this.aperatifYemeklerUrl}/${id}`;
     return this.http.get<Yemek>(url)
     .pipe(
-      //tap(_ => this.log(`fetched recipe id=${id}`)),
+      // tap(_ => this.log(`fetched recipe id=${id}`)),
       catchError(this.handleError<Yemek>(`aperatifYemek id=${id}`))
     );
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Yemek } from '../shared/yemek';
-import { AperatifYemeklerService } from '../services/aparatif-yemekler.service';
+import { Yemek } from '../../shared/yemek';
+import { AparatifYemeklerService } from '../../services/aparatif-yemekler.service';
 
 @Component({
   selector: 'app-aparatif-yemekler',
@@ -10,10 +10,10 @@ import { AperatifYemeklerService } from '../services/aparatif-yemekler.service';
 })
 export class AparatifYemeklerComponent implements OnInit {
 
-  aperatifYemekler : Yemek[];
-  title = "My Aperatifs";
+  aperatifYemekler: Yemek[];
+  title = 'Aperatifler';
 
-  constructor(private aperatifYemeklerService: AperatifYemeklerService) { }
+  constructor(private aperatifYemeklerService: AparatifYemeklerService) { }
 
   ngOnInit() {
     this.getAperatifYemekler();

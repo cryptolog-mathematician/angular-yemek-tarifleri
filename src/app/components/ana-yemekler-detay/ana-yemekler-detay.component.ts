@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Yemek } from '../shared/yemek';
-import { AnaYemeklerService } from '../services/ana-yemekler.service';
+import { Yemek } from '../../shared/yemek';
+import { AnaYemeklerService } from '../../services/ana-yemekler.service';
 
 @Component({
   selector: 'app-ana-yemekler-detay',

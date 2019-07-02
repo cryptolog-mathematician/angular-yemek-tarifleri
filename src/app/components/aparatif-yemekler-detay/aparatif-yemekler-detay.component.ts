@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Yemek } from '../shared/yemek';
-import { AperatifYemeklerService } from '../services/aparatif-yemekler.service';
+import { Yemek } from '../../shared/yemek';
+import { AparatifYemeklerService } from '../../services/aparatif-yemekler.service';
 
 @Component({
   selector: 'app-aparatif-yemekler-detay',
@@ -16,7 +16,7 @@ export class AparatifYemeklerDetayComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private aperatifYemeklerService: AperatifYemeklerService,
+    private aperatifYemeklerService: AparatifYemeklerService,
     private location: Location
   ) { }
 

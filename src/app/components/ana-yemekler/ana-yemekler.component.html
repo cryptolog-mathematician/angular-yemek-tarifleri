@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <div class="col">
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Name</th>
+      </thead>
+      <tr *ngFor = "let yemek of anaYemekler" >
+        <td>{{yemek.id}}</td>
+        <td>
+          <a routerLink="/anaYemeklerDetay/{{yemek.id}}">
+            {{yemek.name}}
+            <img src={{yemek.image}} alt="xxx">
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

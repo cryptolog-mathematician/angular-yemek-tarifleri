@@ -6,6 +6,8 @@ import { AnaYemeklerDetayComponent } from './components/ana-yemekler-detay/ana-y
 import { AparatifYemeklerComponent } from './components/aparatif-yemekler/aparatif-yemekler.component';
 import { AparatifYemeklerDetayComponent } from './components/aparatif-yemekler-detay/aparatif-yemekler-detay.component';
 import { HomeMixComponent } from './components/home-mix/home-mix.component';
+import { BorekTarifleriComponent } from './components/borek-tarifleri/borek-tarifleri.component';
+import { BorekTarifleriDetayComponent } from './components/borek-tarifleri-detay/borek-tarifleri-detay.component';
 
 const routes: Routes = [
   { path: 'anaYemekTarifleri/:id', component: AnaYemeklerComponent },
@@ -13,7 +15,10 @@ const routes: Routes = [
   { path: 'aperatifYemekTarifleri/:id', component: AparatifYemeklerComponent },
   { path: 'aperatifYemeklerDetay/:id', component: AparatifYemeklerDetayComponent },
   { path: '', redirectTo: '/homeMix', pathMatch: 'full' },
-  { path: 'homeMix', component: HomeMixComponent }
+  { path: 'homeMix', component: HomeMixComponent },
+  { path: 'borekTarifleri/:id', component: BorekTarifleriComponent },
+  { path: 'borekDetay/:id', component: BorekTarifleriDetayComponent }
+
 ];
 
 @NgModule({

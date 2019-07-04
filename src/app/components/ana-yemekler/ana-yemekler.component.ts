@@ -18,7 +18,7 @@ export class AnaYemeklerComponent implements OnInit {
     this.getAnaYemekTarifleri();
   }
 
-  getAnaYemekTarifleri(): void{
+  getAnaYemekTarifleri(): void {
     this.anaYemeklerService.getAnaYemekTarifleri().
     subscribe(anaYemekler => this.anaYemekler = anaYemekler);
   }

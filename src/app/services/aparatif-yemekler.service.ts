@@ -32,7 +32,7 @@ export class AparatifYemeklerService {
     return this.http.get<Yemek>(url)
     .pipe(
       // tap(_ => this.log(`fetched recipe id=${id}`)),
-      catchError(this.handleError<Yemek>(`aperatifYemek id=${id}`))
+      catchError(this.handleError<Yemek>(`getAperatifYemek id=${id}`))
     );
   }
 

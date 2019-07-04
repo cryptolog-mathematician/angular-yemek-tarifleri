@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-//import { Kategori } from '../shared/kategori';
 import { Yemek } from '../shared/yemek';
 
 import { catchError, map, tap } from 'rxjs/operators';
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
@@ -21,19 +19,19 @@ export class AnaYemeklerService {
 
   constructor(private http: HttpClient) { }
 
-  getAnaYemekTarifleri(): Observable< Yemek[] >{
+  getAnaYemekTarifleri(): Observable< Yemek[] > {
     return this.http.get<Yemek[]>(this.anaYemekTarifleriUrl)
       .pipe(
-        //tap(_ => this.log('fetched recipies')),
+        // tap(_ => this.log('fetched recipies')),
         catchError(this.handleError<Yemek[]>('getAnaYemekTarifleri', []))
       );
   }
 
-  getAnaYemek(id: number): Observable< Yemek >{
+  getAnaYemek(id: number): Observable< Yemek > {
     const url = `${this.anaYemekTarifleriUrl}/${id}`;
     return this.http.get<Yemek>(url)
     .pipe(
-      //tap(_ => this.log(`fetched recipe id=${id}`)),
+      // tap(_ => this.log(`fetched recipe id=${id}`)),
       catchError(this.handleError<Yemek>(`getAnaYemek id=${id}`))
     );
   }
@@ -42,7 +40,7 @@ export class AnaYemeklerService {
   updateAnaYemek (yemek: Yemek): Observable<any> {
     return this.http.put(this.anaYemekTarifleriUrl, yemek, httpOptions)
     .pipe(
-      //tap(_ => this.log(`updated recipe id=${recipe.id}`)),
+      // tap(_ => this.log(`updated recipe id=${recipe.id}`)),
       catchError(this.handleError<any>('updateAnaYemek'))
     );
   }

@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+  }
+  .container{
+     margin-top: 5px;
+     padding: 5px;
+   }
+   .col{
+      margin-top: 5px;
+    }
+  a{
+    text-decoration: none;
+    color: black;
+    line-height: 150px;
+    font-weight: bold;
+  }
+  h1{
+    color: white;
+    background: brown;
+    text-align: center;
+  }
+  table{
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  thead{
+    background: brown;
+    color: white;
+    font-size: 20px;
+  }
+  tr:nth-child(2n){
+    background: pink;
+  }
+  tr:nth-child(2n+1){
+    background: rgb(216, 186, 199);
+  }
+  img{
+    float: right;
+    width: 150px;
+    height: 150px;
+  }
+  

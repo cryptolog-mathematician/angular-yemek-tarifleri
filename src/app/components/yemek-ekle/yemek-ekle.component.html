@@ -1,0 +1,20 @@
+<div>
+  <form>
+    <label for="kategori">Kategori Adi:
+      <input [(ngModel)]="kategoriAd" name="kategori" placeholder="kategori adi"/>
+    </label>
+    <label for="yemek">Yemek Adi:
+      <input [(ngModel)]="yemekAd" name="yemek" placeholder="yemek adi"/>
+    </label>
+    <div>
+      <label for="icerik">Icerikler:
+        <input [(ngModel)]="icerik" name="icerik" placeholder="icerik"/>
+      </label>
+      <label for="olcu">Olculer:
+        <input [(ngModel)]="olcu" name="olcu" placeholder="olcu"/>
+      </label>
+      <button (click)= "saveIcerikOlcu()">save</button>
+    </div>
+    <button (click)= "saveTarif()">Save</button>
+  </form>
+</div>

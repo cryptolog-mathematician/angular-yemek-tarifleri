@@ -28,19 +28,19 @@ export class HomeMixService {
   getKategoriler(): Observable< Kategori[] >{
     return this.http.get<Kategori[]>(this.kategorilerUrl)
       .pipe(
-        //tap(_ => this.log('fetched recipies')),
+        // tap(_ => this.log('fetched recipies')),
         catchError(this.handleError<Kategori[]>('getKategoriler', []))
       );
   }
 
-  getAnayemekler(): Observable<Yemek[]>{
+  getAnayemekler(): Observable<Yemek[]> {
     return this.http.get<Yemek[]>(this.anaYemeklerUrl)
     .pipe(
       catchError(this.handleError<Yemek[]>('getAnaYemekler', []))
     );
   }
 
-  getAperatifYemekler(): Observable<Yemek[]>{
+  getAperatifYemekler(): Observable<Yemek[]> {
     return this.http.get<Yemek[]>(this.aperatifYemeklerUrl)
     .pipe(
       catchError(this.handleError<Yemek[]>('getAperatifYemekler', []))

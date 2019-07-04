@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AnaYemeklerComponent } from './components/ana-yemekler/ana-yemekler.component';
@@ -9,12 +9,15 @@ import { AparatifYemeklerComponent } from './components/aparatif-yemekler/aparat
 import { AparatifYemeklerDetayComponent } from './components/aparatif-yemekler-detay/aparatif-yemekler-detay.component';
 import { HomeMixComponent } from './components/home-mix/home-mix.component';
 import { NavigeComponent } from './components/navige/navige.component';
+import { BorekTarifleriComponent } from './components/borek-tarifleri/borek-tarifleri.component';
+import { BorekTarifleriDetayComponent } from './components/borek-tarifleri-detay/borek-tarifleri-detay.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './services/in-memory-data.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { YemekEkleComponent } from './components/yemek-ekle/yemek-ekle.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { InMemoryDataService }  from './services/in-memory-data.service';
     AparatifYemeklerComponent,
     AparatifYemeklerDetayComponent,
     HomeMixComponent,
-    NavigeComponent
+    NavigeComponent,
+    BorekTarifleriComponent,
+    BorekTarifleriDetayComponent,
+    YemekEkleComponent
   ],
   imports: [
     BrowserModule,

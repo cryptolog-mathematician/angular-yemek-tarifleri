@@ -1,39 +1,39 @@
 <div class="container" *ngIf="aperatifYemek">
   <h1>{{aperatifYemek.name}}</h1>
-    <div class="recipe-detail">
-      <p><span class="span-detail">Id: </span>{{aperatifYemek.id}}</p>
-      <div class="">
-            <img src={{aperatifYemek.image}} alt="xxx">
-      </div>
-      <div>
-          <table>
-            <thead>
-              <th>Ingradients</th>
-              <th>Measurements</th>
-            </thead>
-            <tr>
-              <td>
-                <li *ngFor = "let ingrad of aperatifYemek.ingradients">
-                  <span>{{ingrad}}</span>
-                </li>
-              </td>
-              <td>
-                <li *ngFor = "let measure of aperatifYemek.measurements">
-                  <span>{{measure}}</span>
-                </li>
-              </td>
-            </tr>
-          </table>
-      </div>
+  <div class="recipe-detail">
+    <p><span class="span-detail">Id: </span>{{aperatifYemek.id}}</p>
+    <div class="">
+          <img src={{aperatifYemek.image}} alt="xxx">
     </div>
-    <div class="recipe-preparation">
-      <h3>Preparation</h3>
-      <p> {{aperatifYemek.preparation}} </p>
+    <div>
+        <table>
+          <thead>
+            <th>Ingradients</th>
+            <th>Measurements</th>
+          </thead>
+          <tr>
+            <td>
+              <li *ngFor = "let ingrad of aperatifYemek.ingradients">
+                <span>{{ingrad}}</span>
+              </li>
+            </td>
+            <td>
+              <li *ngFor = "let measure of aperatifYemek.measurements">
+                <span>{{measure}}</span>
+              </li>
+            </td>
+          </tr>
+        </table>
     </div>
-    <div class="update">
-      <label>Name:
-        <input [(ngModel)]="recipe.name" placeholder="name"/>
-      </label>
-    </div>
-    <button (click)="goBack()"> Go back </button>
+  </div>
+  <div class="recipe-preparation">
+    <h3>Preparation</h3>
+    <p> {{aperatifYemek.preparation}} </p>
+  </div>
+  <div class="update">
+    <label>Name:
+      <input [(ngModel)]="aperatifYemek.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()"> Go back </button>
 </div>

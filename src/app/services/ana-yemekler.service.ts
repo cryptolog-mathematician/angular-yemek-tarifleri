@@ -36,7 +36,14 @@ export class AnaYemeklerService {
     );
   }
 
-  /** PUT: update the hero on the server */
+  addTarif(yemek: Yemek): Observable<Yemek> {
+    return this.http.post<Yemek>(this.anaYemekTarifleriUrl, yemek, httpOptions)
+    .pipe(
+      catchError(this.handleError<Yemek>('anaYemekTarifi'))
+    );
+  }
+
+  /** PUT: update  */
   updateAnaYemek (yemek: Yemek): Observable<any> {
     return this.http.put(this.anaYemekTarifleriUrl, yemek, httpOptions)
     .pipe(

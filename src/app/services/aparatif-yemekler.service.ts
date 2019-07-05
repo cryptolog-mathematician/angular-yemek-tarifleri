@@ -36,6 +36,13 @@ export class AparatifYemeklerService {
     );
   }
 
+  addTarif(yemek: Yemek): Observable<Yemek> {
+    return this.http.post<Yemek>(this.aperatifYemeklerUrl, yemek, httpOptions)
+    .pipe(
+      catchError(this.handleError<Yemek>('putBorekTarifi'))
+    );
+  }
+
   /**
  * Handle Http operation that failed.
  * Let the app continue.

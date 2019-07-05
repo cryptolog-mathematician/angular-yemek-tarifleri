@@ -1,20 +1,77 @@
-<div>
-  <form>
-    <label for="kategori">Kategori Adi:
-      <input [(ngModel)]="kategoriAd" name="kategori" placeholder="kategori adi"/>
-    </label>
-    <label for="yemek">Yemek Adi:
-      <input [(ngModel)]="yemekAd" name="yemek" placeholder="yemek adi"/>
-    </label>
-    <div>
-      <label for="icerik">Icerikler:
-        <input [(ngModel)]="icerik" name="icerik" placeholder="icerik"/>
-      </label>
-      <label for="olcu">Olculer:
-        <input [(ngModel)]="olcu" name="olcu" placeholder="olcu"/>
-      </label>
-      <button (click)= "saveIcerikOlcu()">save</button>
-    </div>
-    <button (click)= "saveTarif()">Save</button>
-  </form>
+  <div class="header">
+    <h3>{{title}}</h3>
+  </div>
+<div class="container">  
+  <div class="div-form">
+      <form>
+        <table>
+          <tr>
+            <td colspan="2">
+              <label for="kategori">Kategori Adi:</label>
+              <input [(ngModel)]="kategoriAd" #kategoriAdi name="kategori" placeholder="kategori adi"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <label for="yemek">Yemek Adi:</label>
+              <input [(ngModel)]="yemekAd" name="yemek" placeholder="yemek adi"/>
+            </td>
+          </tr>
+          <tr>
+              <td colspan="2">
+                <label for="photo">Foto:</label>
+                <input [(ngModel)]="photo" type="file" name="yemek" placeholder="yemek adi"/>
+              </td>
+            </tr>
+          <tr>
+            <td>
+                <label for="icerik"><span> Icerikler:</span>
+                  <input class="olcuIcerik" #icerik name="icerik" placeholder="icerik"/>
+                </label>
+            </td>
+            <td>
+                <label for="olcu"> <span>Olculer:</span>
+                  <input class="olcuIcerik" #olcu name="olcu" placeholder="olcu"/>
+                </label>
+                <button (click)= "saveIcerik(icerik.value); saveOlcu(olcu.value)">save</button>
+            </td>
+          </tr>
+          <button (click)= "addTarif(kategoriAd.value)">Save Tarif</button>
+        </table>        
+      </form>
+  </div>
+  
+  <div class="div-ts">
+    <h5>Kategori Adi: {{kategoriAd}}</h5>
+    <h5>Yemek Adi: {{yemek.name}}</h5>
+      <div class="recipe-detail">
+        <div>
+          <h5>Foto:</h5>  <img src={{yemek.image}} alt="xxx">
+        </div>
+        <div>
+            <table>
+              <thead>
+                <th>Ingradients</th>
+                <th>Measurements</th>
+              </thead>
+              <tr>
+                <td>
+                  <li *ngFor = "let ingrad of icerikler">
+                    <span>{{ingrad}}</span>
+                  </li>
+                </td>
+                <td>
+                  <li *ngFor = "let measure of olculer">
+                    <span>{{measure}}</span>
+                  </li>
+                </td>
+              </tr>
+            </table>
+        </div>
+      </div>
+      <div class="recipe-preparation">
+        <h5>Preparation:</h5>
+        <p> {{yemek.preparation}} </p>
+      </div>
+  </div>
 </div>

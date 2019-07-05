@@ -11,13 +11,13 @@ import { HomeMixComponent } from './components/home-mix/home-mix.component';
 import { NavigeComponent } from './components/navige/navige.component';
 import { BorekTarifleriComponent } from './components/borek-tarifleri/borek-tarifleri.component';
 import { BorekTarifleriDetayComponent } from './components/borek-tarifleri-detay/borek-tarifleri-detay.component';
+import { YemekEkleComponent } from './components/yemek-ekle/yemek-ekle.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
-import { YemekEkleComponent } from './components/yemek-ekle/yemek-ekle.component';
 
 @NgModule({
   declarations: [

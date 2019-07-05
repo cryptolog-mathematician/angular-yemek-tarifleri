@@ -8,6 +8,7 @@ import { AparatifYemeklerDetayComponent } from './components/aparatif-yemekler-d
 import { HomeMixComponent } from './components/home-mix/home-mix.component';
 import { BorekTarifleriComponent } from './components/borek-tarifleri/borek-tarifleri.component';
 import { BorekTarifleriDetayComponent } from './components/borek-tarifleri-detay/borek-tarifleri-detay.component';
+import { YemekEkleComponent } from './components/yemek-ekle/yemek-ekle.component';
 
 const routes: Routes = [
   { path: 'anaYemekTarifleri/:id', component: AnaYemeklerComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/homeMix', pathMatch: 'full' },
   { path: 'homeMix', component: HomeMixComponent },
   { path: 'borekTarifleri/:id', component: BorekTarifleriComponent },
-  { path: 'borekDetay/:id', component: BorekTarifleriDetayComponent }
+  { path: 'borekDetay/:id', component: BorekTarifleriDetayComponent },
+  { path: 'tarifEkle', component: YemekEkleComponent }
 
 ];
 
